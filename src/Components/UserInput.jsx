@@ -1,7 +1,7 @@
 import {useState} from "react"
 
 export default function UserInput() {
-  const [usereInput, setUserinput] = useState({
+  const [userInput, setUserinput] = useState({
     initialInvestment: 1000,
     annualInvestment: 1200,
     expectedReturn: 6,
@@ -21,21 +21,45 @@ export default function UserInput() {
       <div className="input-group">
         <p>
           <label>Initial Investment</label>
-          <input type="number" required></input>
+          <input
+            type="number"
+            required
+            value={userInput.initialInvestment}
+            onChange={(event) => 
+              handleChange('initialInvestment',event.target.value)}>
+            </input>
         </p>
         <p>
           <label>Anual Investment</label>
-          <input type="number" required></input>
+          <input
+            type="number"
+            required
+            value={userInput.annualInvestment}
+            onChange={(event) => 
+              handleChange('annualInvestment',event.target.value)}>
+            </input>
         </p>
       </div>
       <div className="input-group">
         <p>
           <label>Expected Return</label>
-          <input type="number" required></input>
+          <input
+            type="number"
+            required
+            value={userInput.expectedReturn}
+            onChange={(event) => 
+              handleChange('expectedReturn',event.target.value)}>
+            </input>
         </p>
         <p>
-          <label>Return</label>
-          <input type="number" required></input>
+          <label>Duration</label>
+          <input
+            type="number"
+            required
+            value={userInput.duration}
+            onChange={(event) => 
+              handleChange('duration',event.target.value)}>
+            </input>
         </p>
       </div>
     </section>
