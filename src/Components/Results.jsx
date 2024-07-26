@@ -1,5 +1,6 @@
-import 
-
-export default function Results(){
-
+export default function Results({input}){
+  
+  return (
+    <p>Results</p>
+  )
 }
